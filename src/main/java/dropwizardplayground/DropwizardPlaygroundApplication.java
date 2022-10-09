@@ -24,7 +24,7 @@ public class DropwizardPlaygroundApplication extends Application<DropwizardPlayg
     @Override
     public void run(DropwizardPlaygroundConfiguration configuration,
                     Environment environment) {
-        // TODO: implement application
+        environment.jersey().register(new HelloResource());
     }
 
 }
