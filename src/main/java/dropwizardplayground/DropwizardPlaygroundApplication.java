@@ -25,6 +25,7 @@ public class DropwizardPlaygroundApplication extends Application<DropwizardPlayg
     public void run(DropwizardPlaygroundConfiguration configuration,
                     Environment environment) {
         environment.jersey().register(new HelloResource());
+        environment.healthChecks().register("myhealthcheck", new MyHealthCheck());
     }
 
 }
